@@ -1,0 +1,2 @@
+from loja.serializers.produto import ProdutoReadSerializer, ProdutoWriteSerializer
+from loja.serializers.marca import MarcaReadSerializer, MarcaWriteSerializer
