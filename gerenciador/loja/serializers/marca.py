@@ -9,6 +9,7 @@ class MarcaReadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Marca
         fields = [
+            'id',
             'nome',
             'total_produtos'
         ]

@@ -10,6 +10,7 @@ class ProdutoReadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Produto
         fields = [
+            "id",
             "nome",
             "nome_marca",
             "tipo",
