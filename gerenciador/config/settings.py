@@ -14,8 +14,6 @@ SECRET_KEY = 'django-insecure-ynszdn!=(vvs6owd!d$44nxx^3snv2_f&a(m#28j&y!^6(qt_e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -140,9 +138,10 @@ SIMPLE_JWT = {
     "AUTH_HEADER_TYPES": ("Bearer",),
 }
 
-ALLOWED_HOSTS = ["*"]
-
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-CORS_ALLOW_ORIGINS = True
+ALLOWED_HOSTS = ["*"]
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
