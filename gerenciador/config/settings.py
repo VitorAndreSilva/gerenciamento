@@ -1,6 +1,7 @@
 from pathlib import Path
 from datetime import timedelta
 
+print("settings.py carregado com sucesso!")
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -144,4 +145,4 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 ALLOWED_HOSTS = ["*"]
 
 CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOW_CREDENTIALS = True
+#CORS_ALLOW_CREDENTIALS = True
