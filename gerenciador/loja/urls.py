@@ -4,7 +4,7 @@ from loja.views.marca import MarcaViewSet
 
 router = DefaultRouter()
 
-router.register(r'produtos', ProdutoViewSet)
+router.register(r'produtos', ProdutoViewSet, basename='produto')
 router.register(r'marcas', MarcaViewSet)
 
 urlpatterns = router.urls
