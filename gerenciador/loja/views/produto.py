@@ -26,6 +26,8 @@ class ProdutoViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend, OrderingFilter]
     filerset_class = ProdutoFilter
     ordering_fields = ["preco", "criado_em", "nome", "marca"] # Parâmetros pelo que se pode ordenar
+    def perform_create(self, serializer):
+        serializer.save(usuario=self.request.user)
     # Deletar
     def perform_destroy(self, instance):
         ProdutoService.desativar_produto(instance)
