@@ -6,7 +6,7 @@ from loja.managers.produto_manager import ProdutoManager
 class Produto(models.Model):
     usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, related_name="produtos")
     nome = models.CharField(max_length=100)
-    tipo = models.CharField(max_length=35)
+    tipo = models.CharField(max_length=35, null=True, blank=True)
     capacidade = models.IntegerField(null=True, blank=True)
     preco = models.DecimalField(max_digits=10, decimal_places=2)
     quantidade = models.IntegerField()
